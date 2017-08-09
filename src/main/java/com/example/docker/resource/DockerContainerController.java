@@ -21,13 +21,17 @@ public class DockerContainerController {
 	
 	@RequestMapping(value = "/{owner}" , method = POST)
 	public @ResponseBody Container create(@PathVariable String owner) {
-		service.createContainer(owner);
-		return new Container("lims1", 8082);
+		return service.createContainer(owner);
+		 
 	}
 	 
 	@RequestMapping(value = "/{owner}" , method = GET)
 	public @ResponseBody Container temp(@PathVariable String owner) {
-		return create (owner);
+		return service.getPort(owner);
 	}
+	
+	
+	
+	
 	 
 }

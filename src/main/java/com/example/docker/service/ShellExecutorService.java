@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,13 +14,14 @@ import com.example.docker.repository.Container;
 @Configuration
 public class ShellExecutorService {
 
- 
+	private final Logger LOG = LoggerFactory.getLogger(this.getClass());
+
 	@Value("${docker.create}")
 	private String createContainer;
 
 	public Container createContainer(String owner) {
 
-		if (execute(createContainer, owner).getErrorcode() == 0 ) {
+		if (execute(createContainer, owner).getErrorcode() == 0) {
 			return getPort(owner);
 		} else {
 			return null;
@@ -27,10 +30,17 @@ public class ShellExecutorService {
 
 	@Value("${docker.getport}")
 	private String getport;
+
 	public Container getPort(String owner) {
 		ShellExecutorService.ShellResult result = execute(getport, owner);
-		if (result.getErrorcode()  == 0) {		
-			return new Container(owner, Integer.parseInt(result.getMessage()) );
+
+		if (LOG.isDebugEnabled()) {
+			LOG.debug("==== shell script executing result====");
+			LOG.debug(result.toString());
+		}
+
+		if (result.getErrorcode() == 0) {
+			return new Container(owner, owner, Integer.parseInt(result.getMessage().trim()));
 		} else {
 			return null;
 		}
@@ -45,16 +55,16 @@ public class ShellExecutorService {
 		// pb.command(new String[] { "notepad.exe", "test.txt" });
 		try {
 			Process process = pb.start();
-			BufferedReader br = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String line = null;
 			while ((line = br.readLine()) != null)
 				message.append(line);
 			exitVal = process.waitFor();
 		} catch (IOException e) {
-		 
+
 			e.printStackTrace();
 		} catch (InterruptedException e) {
- 
+
 			e.printStackTrace();
 		}
 
@@ -85,6 +95,12 @@ public class ShellExecutorService {
 
 		public String getMessage() {
 			return message;
+		}
+
+		@Override
+		public String toString() {
+
+			return String.format("ShellExecutorService.ShellResult[errorcode=%d, message='%s' ]", errorcode, message);
 		}
 
 	}

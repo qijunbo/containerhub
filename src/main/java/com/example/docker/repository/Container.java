@@ -16,7 +16,8 @@ public class Container {
 	}
 
 	
-	public Container(String name, int port) {
+	public Container(String id , String name, int port) {
+		this.id = id;
 		this.name = name;
 		this.port = port;
 	}

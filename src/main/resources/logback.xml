@@ -37,13 +37,13 @@
 		<appender-ref ref="APP_FILE" />
 		<appender-ref ref="STDOUT" />
 	</root>
-	<logger name="com.ibm.payment" additivity="false">
-		<level value="TRACE" />
+	<logger name="com.example" additivity="false">
+		<level value="DEBUG" />
 		<appender-ref ref="APP_FILE" />
 		<appender-ref ref="STDOUT" />
 	</logger>
-	<logger name="org.apache.wink.server.internal.log" additivity="false">
-		<level value="DEBUG" />
+	<logger name="com.example.jpa" additivity="false">
+		<level value="TRACE" />
 		<appender-ref ref="APP_FILE" />
 		<appender-ref ref="STDOUT" />
 	</logger>
