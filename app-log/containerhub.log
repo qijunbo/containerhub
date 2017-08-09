@@ -1,0 +1,234 @@
+2017-08-09 11:00:59.727 [main] INFO  com.example.Application.logStarting<48>:
+Starting Application on LAPTOP-MTIQEU28 with PID 14864 (C:\workspace\containerhub\bin started by qijunbo in C:\workspace\containerhub)
+2017-08-09 11:00:59.731 [main] INFO  com.example.Application.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-09 11:00:59.795 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Wed Aug 09 11:00:59 CST 2017]; root of context hierarchy
+2017-08-09 11:01:00.213 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-09 11:01:01.970 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize<89>:
+Tomcat initialized with port(s): 80 (http)
+2017-08-09 11:01:01.990 [main] INFO  o.a.c.core.StandardService.log<179>:
+Starting service Tomcat
+2017-08-09 11:01:01.992 [main] INFO  o.a.c.core.StandardEngine.log<179>:
+Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-08-09 11:01:02.393 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring embedded WebApplicationContext
+2017-08-09 11:01:02.397 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext<276>:
+Root WebApplicationContext: initialization completed in 2602 ms
+2017-08-09 11:01:02.566 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.onStartup<190>:
+Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-09 11:01:02.572 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-09 11:01:02.573 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-09 11:01:02.579 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-09 11:01:02.579 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-09 11:01:02.580 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'simpleCORSFilter' to: [/*]
+2017-08-09 11:01:03.179 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-09 11:01:03.206 [main] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-09 11:01:03.307 [main] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-09 11:01:03.311 [main] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-09 11:01:03.311 [main] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-09 11:01:03.362 [main] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-09 11:01:03.500 [main] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-09 11:01:04.152 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-09 11:01:04.175 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-09 11:01:04.224 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-09 11:01:04.937 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache<534>:
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Wed Aug 09 11:00:59 CST 2017]; root of context hierarchy
+2017-08-09 11:01:05.040 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[POST]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.create(java.lang.String)
+2017-08-09 11:01:05.041 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[GET]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.temp(java.lang.String)
+2017-08-09 11:01:05.052 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[GET]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.get(long)
+2017-08-09 11:01:05.053 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[GET]}" onto public java.lang.Iterable<com.example.jpa.repository.Customer> com.example.jpa.resource.CustomerController.get()
+2017-08-09 11:01:05.063 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[PUT]}" onto public boolean com.example.jpa.resource.CustomerController.update(long,com.example.jpa.repository.Customer)
+2017-08-09 11:01:05.063 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[DELETE]}" onto public java.lang.String com.example.jpa.resource.CustomerController.delete(long)
+2017-08-09 11:01:05.071 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[POST]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.create(com.example.jpa.repository.Customer)
+2017-08-09 11:01:05.073 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-09 11:01:05.074 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-09 11:01:05.116 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 11:01:05.117 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 11:01:05.169 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 11:01:05.219 [main] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping.<init><573>:
+Adding welcome page: class path resource [public/index.html]
+2017-08-09 11:01:05.482 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated<431>:
+Registering beans for JMX exposure on startup
+2017-08-09 11:01:05.507 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Initializing ProtocolHandler ["http-nio-80"]
+2017-08-09 11:01:05.530 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Starting ProtocolHandler ["http-nio-80"]
+2017-08-09 11:01:05.573 [main] INFO  o.a.t.util.net.NioSelectorPool.log<179>:
+Using a shared selector for servlet write/read
+2017-08-09 11:01:05.611 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start<198>:
+Tomcat started on port(s): 80 (http)
+2017-08-09 11:01:05.728 [main] INFO  com.example.Application.run<38>:
+Customers found with findAll():
+2017-08-09 11:01:05.729 [main] INFO  com.example.Application.run<39>:
+-------------------------------
+2017-08-09 11:01:05.758 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService<47>:
+HHH000397: Using ASTQueryTranslatorFactory
+2017-08-09 11:01:05.939 [main] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@6f315b08
+2017-08-09 11:01:05.943 [main] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@45e140ae
+2017-08-09 11:01:05.947 [main] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@48cdb156
+2017-08-09 11:01:05.947 [main] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@4b4814d0
+2017-08-09 11:01:05.947 [main] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@4ae8fb2a
+2017-08-09 11:01:05.947 [main] INFO  com.example.Application.run<43>:
+
+2017-08-09 11:01:05.955 [main] INFO  com.example.Application.run<47>:
+Customer found with findOne(1L):
+2017-08-09 11:01:05.955 [main] INFO  com.example.Application.run<48>:
+--------------------------------
+2017-08-09 11:01:05.955 [main] INFO  com.example.Application.run<49>:
+com.example.jpa.repository.Customer@159ac15f
+2017-08-09 11:01:05.959 [main] INFO  com.example.Application.run<50>:
+
+2017-08-09 11:01:05.963 [main] INFO  com.example.Application.run<53>:
+Customer found with findByLastName('Bauer'):
+2017-08-09 11:01:05.963 [main] INFO  com.example.Application.run<54>:
+--------------------------------------------
+2017-08-09 11:01:05.982 [main] INFO  com.example.Application.run<56>:
+com.example.jpa.repository.Customer@307af381
+2017-08-09 11:01:05.982 [main] INFO  com.example.Application.run<56>:
+com.example.jpa.repository.Customer@1510b9a2
+2017-08-09 11:01:05.982 [main] INFO  com.example.Application.run<58>:
+
+2017-08-09 11:01:05.982 [main] INFO  com.example.Application.logStarted<57>:
+Started Application in 6.621 seconds (JVM running for 7.309)
+2017-08-09 11:01:22.214 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-09 11:01:22.222 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<489>:
+FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-09 11:01:22.247 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<508>:
+FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-08-09 11:02:25.484 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration<319>:
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.jpa.CustomerRepositoryTests], using SpringBootContextLoader
+2017-08-09 11:02:25.493 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader.generateDefaultLocations<264>:
+Could not detect default resource locations for test class [com.example.jpa.CustomerRepositoryTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-08-09 11:02:25.495 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses<81>:
+Could not detect default configuration classes for test class [com.example.jpa.CustomerRepositoryTests]: CustomerRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-08-09 11:02:25.699 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses<206>:
+Found @SpringBootConfiguration com.example.Application for test class com.example.jpa.CustomerRepositoryTests
+2017-08-09 11:02:25.708 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames<260>:
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-08-09 11:02:25.736 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners<187>:
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a4f8ddc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2db3e291, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@96926ab, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6800d0ff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e77814e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ce25b7b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4cfe6832, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2297de7a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@20e85697, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3e4fe872, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1cfb871, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d37c23c]
+2017-08-09 11:02:26.185 [Test worker] INFO  c.e.j.CustomerRepositoryTests.logStarting<48>:
+Starting CustomerRepositoryTests on LAPTOP-MTIQEU28 with PID 6764 (started by qijunbo in C:\workspace\containerhub)
+2017-08-09 11:02:26.186 [Test worker] INFO  c.e.j.CustomerRepositoryTests.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-09 11:02:26.202 [Test worker] INFO  o.s.c.a.AnnotationConfigApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19dfde8a: startup date [Wed Aug 09 11:02:26 CST 2017]; root of context hierarchy
+2017-08-09 11:02:26.982 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-09 11:02:27.358 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor.process<106>:
+Replacing 'dataSource' DataSource bean with embedded version
+2017-08-09 11:02:27.360 [Test worker] INFO  o.s.b.f.s.DefaultListableBeanFactory.registerBeanDefinition<828>:
+Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]] with [Root bean: class [org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2017-08-09 11:02:27.362 [Test worker] WARN  o.s.c.a.ConfigurationClassPostProcessor.enhanceConfigurationClasses<373>:
+Cannot enhance @Configuration bean definition 'embeddedDataSourceBeanFactoryPostProcessor' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-08-09 11:02:27.972 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory.initDatabase<185>:
+Starting embedded database: url='jdbc:h2:mem:20221833-92fb-4da2-99e9-a61766f96968;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2017-08-09 11:02:28.613 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-09 11:02:28.630 [Test worker] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-09 11:02:28.762 [Test worker] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-09 11:02:28.764 [Test worker] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-09 11:02:28.772 [Test worker] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-09 11:02:28.823 [Test worker] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-09 11:02:28.967 [Test worker] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-09 11:02:29.512 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-09 11:02:29.531 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-09 11:02:29.573 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-09 11:02:30.139 [Test worker] INFO  com.example.Application.run<38>:
+Customers found with findAll():
+2017-08-09 11:02:30.139 [Test worker] INFO  com.example.Application.run<39>:
+-------------------------------
+2017-08-09 11:02:30.161 [Test worker] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService<47>:
+HHH000397: Using ASTQueryTranslatorFactory
+2017-08-09 11:02:30.284 [Test worker] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@3faf5889
+2017-08-09 11:02:30.285 [Test worker] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@9a5602a
+2017-08-09 11:02:30.286 [Test worker] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@767ad069
+2017-08-09 11:02:30.294 [Test worker] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@10d31289
+2017-08-09 11:02:30.295 [Test worker] INFO  com.example.Application.run<41>:
+com.example.jpa.repository.Customer@40cf22e2
+2017-08-09 11:02:30.296 [Test worker] INFO  com.example.Application.run<43>:
+
+2017-08-09 11:02:30.309 [Test worker] INFO  com.example.Application.run<47>:
+Customer found with findOne(1L):
+2017-08-09 11:02:30.316 [Test worker] INFO  com.example.Application.run<48>:
+--------------------------------
+2017-08-09 11:02:30.317 [Test worker] INFO  com.example.Application.run<49>:
+com.example.jpa.repository.Customer@7ee16ab8
+2017-08-09 11:02:30.319 [Test worker] INFO  com.example.Application.run<50>:
+
+2017-08-09 11:02:30.319 [Test worker] INFO  com.example.Application.run<53>:
+Customer found with findByLastName('Bauer'):
+2017-08-09 11:02:30.327 [Test worker] INFO  com.example.Application.run<54>:
+--------------------------------------------
+2017-08-09 11:02:30.352 [Test worker] INFO  com.example.Application.run<56>:
+com.example.jpa.repository.Customer@53724c08
+2017-08-09 11:02:30.353 [Test worker] INFO  com.example.Application.run<56>:
+com.example.jpa.repository.Customer@4bcfce30
+2017-08-09 11:02:30.353 [Test worker] INFO  com.example.Application.run<58>:
+
+2017-08-09 11:02:30.355 [Test worker] INFO  c.e.j.CustomerRepositoryTests.logStarted<57>:
+Started CustomerRepositoryTests in 4.504 seconds (JVM running for 6.294)
+2017-08-09 11:02:30.398 [Test worker] INFO  o.s.t.c.t.TransactionContext.startTransaction<101>:
+Began transaction (1) for test context [DefaultTestContext@72017bc7 testClass = CustomerRepositoryTests, testInstance = com.example.jpa.CustomerRepositoryTests@3bfe41b7, testMethod = testFindByLastName@CustomerRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@54829da7 testClass = CustomerRepositoryTests, locations = '{}', classes = '{class com.example.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@41876c48 key = [Package Import com.example.jpa, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7cbced1d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7afe0f6b, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@19079cf8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4a663c06], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@29ed3c05]; rollback [true]
+2017-08-09 11:02:30.490 [Test worker] INFO  o.s.t.c.t.TransactionContext.endTransaction<136>:
+Rolled back transaction for test context [DefaultTestContext@72017bc7 testClass = CustomerRepositoryTests, testInstance = com.example.jpa.CustomerRepositoryTests@3bfe41b7, testMethod = testFindByLastName@CustomerRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@54829da7 testClass = CustomerRepositoryTests, locations = '{}', classes = '{class com.example.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@41876c48 key = [Package Import com.example.jpa, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7cbced1d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7afe0f6b, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@19079cf8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4a663c06], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+2017-08-09 11:02:30.501 [Thread-5] INFO  o.s.c.a.AnnotationConfigApplicationContext.doClose<987>:
+Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@19dfde8a: startup date [Wed Aug 09 11:02:26 CST 2017]; root of context hierarchy
+2017-08-09 11:02:30.509 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy<548>:
+Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-09 11:02:30.510 [Thread-5] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-09 11:02:30.517 [Thread-5] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
