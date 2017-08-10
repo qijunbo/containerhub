@@ -20,7 +20,12 @@ public class ShellExecutorService {
 	private String createContainer;
 
 	public Container createContainer(String owner) {
-
+		// check if it already exists.
+		Container container = getPort(owner);
+		if (container != null) {
+			return container;
+		}
+		
 		if (execute(createContainer, owner).getErrorcode() == 0) {
 			return getPort(owner);
 		} else {

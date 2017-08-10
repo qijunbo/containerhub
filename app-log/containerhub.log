@@ -232,3 +232,587 @@ Closing JPA EntityManagerFactory for persistence unit 'default'
 HHH000227: Running hbm2ddl schema export
 2017-08-09 11:02:30.517 [Thread-5] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
 HHH000230: Schema export complete
+2017-08-10 13:59:50.853 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration<319>:
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.jpa.CustomerRepositoryTests], using SpringBootContextLoader
+2017-08-10 13:59:50.862 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader.generateDefaultLocations<264>:
+Could not detect default resource locations for test class [com.example.jpa.CustomerRepositoryTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-08-10 13:59:50.863 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses<81>:
+Could not detect default configuration classes for test class [com.example.jpa.CustomerRepositoryTests]: CustomerRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-08-10 13:59:51.054 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses<206>:
+Found @SpringBootConfiguration com.example.Application for test class com.example.jpa.CustomerRepositoryTests
+2017-08-10 13:59:51.064 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames<260>:
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-08-10 13:59:51.097 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners<187>:
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3f02a717, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4af561ac, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@269c9897, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27ee268d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@dfe1778, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6c67ff6a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2efd9a51, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78f10b4d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5c986fc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5686a580, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@146b9213, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64b048b0]
+2017-08-10 13:59:51.553 [Test worker] INFO  c.e.j.CustomerRepositoryTests.logStarting<48>:
+Starting CustomerRepositoryTests on LAPTOP-MTIQEU28 with PID 6536 (started by qijunbo in C:\workspace\containerhub)
+2017-08-10 13:59:51.554 [Test worker] DEBUG c.e.j.CustomerRepositoryTests.logStarting<51>:
+Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-08-10 13:59:51.555 [Test worker] INFO  c.e.j.CustomerRepositoryTests.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-10 13:59:51.570 [Test worker] INFO  o.s.c.a.AnnotationConfigApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4223ab28: startup date [Thu Aug 10 13:59:51 CST 2017]; root of context hierarchy
+2017-08-10 13:59:52.205 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-10 13:59:52.364 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor.process<106>:
+Replacing 'dataSource' DataSource bean with embedded version
+2017-08-10 13:59:52.372 [Test worker] INFO  o.s.b.f.s.DefaultListableBeanFactory.registerBeanDefinition<828>:
+Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]] with [Root bean: class [org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2017-08-10 13:59:52.375 [Test worker] WARN  o.s.c.a.ConfigurationClassPostProcessor.enhanceConfigurationClasses<373>:
+Cannot enhance @Configuration bean definition 'embeddedDataSourceBeanFactoryPostProcessor' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-08-10 13:59:52.808 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory.initDatabase<185>:
+Starting embedded database: url='jdbc:h2:mem:1f8a3cb4-84c0-4ba6-9de3-8a1881dc86ec;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2017-08-10 13:59:53.351 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 13:59:53.377 [Test worker] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 13:59:53.454 [Test worker] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 13:59:53.461 [Test worker] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-10 13:59:53.463 [Test worker] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-10 13:59:53.526 [Test worker] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 13:59:53.669 [Test worker] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-10 13:59:54.344 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-10 13:59:54.363 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-10 13:59:54.407 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 13:59:54.958 [Test worker] INFO  com.example.Application.run<32>:
+
+2017-08-10 13:59:54.970 [Test worker] INFO  c.e.j.CustomerRepositoryTests.logStarted<57>:
+Started CustomerRepositoryTests in 3.767 seconds (JVM running for 5.261)
+2017-08-10 13:59:55.013 [Test worker] INFO  o.s.t.c.t.TransactionContext.startTransaction<101>:
+Began transaction (1) for test context [DefaultTestContext@c3ec484 testClass = CustomerRepositoryTests, testInstance = com.example.jpa.CustomerRepositoryTests@12345115, testMethod = testFindByLastName@CustomerRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@e683737 testClass = CustomerRepositoryTests, locations = '{}', classes = '{class com.example.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@337b8f47 key = [Package Import com.example.jpa, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4498e734, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@352a0a73, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@17a0823b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@17214542], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@52f532e1]; rollback [true]
+2017-08-10 13:59:55.058 [Test worker] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService<47>:
+HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 13:59:55.257 [Test worker] INFO  o.s.t.c.t.TransactionContext.endTransaction<136>:
+Rolled back transaction for test context [DefaultTestContext@c3ec484 testClass = CustomerRepositoryTests, testInstance = com.example.jpa.CustomerRepositoryTests@12345115, testMethod = testFindByLastName@CustomerRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@e683737 testClass = CustomerRepositoryTests, locations = '{}', classes = '{class com.example.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@337b8f47 key = [Package Import com.example.jpa, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4498e734, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@352a0a73, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@17a0823b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@17214542], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+2017-08-10 13:59:55.277 [Thread-5] INFO  o.s.c.a.AnnotationConfigApplicationContext.doClose<987>:
+Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4223ab28: startup date [Thu Aug 10 13:59:51 CST 2017]; root of context hierarchy
+2017-08-10 13:59:55.285 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy<548>:
+Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 13:59:55.286 [Thread-5] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-10 13:59:55.294 [Thread-5] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-10 14:30:42.792 [main] INFO  com.example.Application.logStarting<48>:
+Starting Application on LAPTOP-MTIQEU28 with PID 12492 (C:\workspace\containerhub\bin started by qijunbo in C:\workspace\containerhub)
+2017-08-10 14:30:42.796 [main] DEBUG com.example.Application.logStarting<51>:
+Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-08-10 14:30:42.797 [main] INFO  com.example.Application.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-10 14:30:42.896 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 14:30:42 CST 2017]; root of context hierarchy
+2017-08-10 14:30:43.479 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-10 14:30:45.476 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize<89>:
+Tomcat initialized with port(s): 80 (http)
+2017-08-10 14:30:45.510 [main] INFO  o.a.c.core.StandardService.log<179>:
+Starting service Tomcat
+2017-08-10 14:30:45.523 [main] INFO  o.a.c.core.StandardEngine.log<179>:
+Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-08-10 14:30:45.705 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring embedded WebApplicationContext
+2017-08-10 14:30:45.706 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext<276>:
+Root WebApplicationContext: initialization completed in 2810 ms
+2017-08-10 14:30:46.099 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.onStartup<190>:
+Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 14:30:46.105 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 14:30:46.114 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 14:30:46.114 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 14:30:46.115 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 14:30:46.115 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'simpleCORSFilter' to: [/*]
+2017-08-10 14:30:46.934 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 14:30:46.965 [main] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 14:30:47.063 [main] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 14:30:47.065 [main] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-10 14:30:47.072 [main] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-10 14:30:47.115 [main] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 14:30:47.257 [main] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-10 14:30:47.788 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-10 14:30:47.811 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-10 14:30:47.861 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 14:30:48.916 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache<534>:
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 14:30:42 CST 2017]; root of context hierarchy
+2017-08-10 14:30:49.028 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[POST]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.create(java.lang.String)
+2017-08-10 14:30:49.047 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[GET]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.temp(java.lang.String)
+2017-08-10 14:30:49.058 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[GET]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.get(long)
+2017-08-10 14:30:49.068 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[GET]}" onto public java.lang.Iterable<com.example.jpa.repository.Customer> com.example.jpa.resource.CustomerController.get()
+2017-08-10 14:30:49.069 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[PUT]}" onto public boolean com.example.jpa.resource.CustomerController.update(long,com.example.jpa.repository.Customer)
+2017-08-10 14:30:49.079 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[DELETE]}" onto public java.lang.String com.example.jpa.resource.CustomerController.delete(long)
+2017-08-10 14:30:49.079 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[POST]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.create(com.example.jpa.repository.Customer)
+2017-08-10 14:30:49.081 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 14:30:49.082 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 14:30:49.134 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 14:30:49.134 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 14:30:49.190 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 14:30:49.222 [main] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping.<init><573>:
+Adding welcome page: class path resource [public/index.html]
+2017-08-10 14:30:49.542 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated<431>:
+Registering beans for JMX exposure on startup
+2017-08-10 14:30:49.564 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Initializing ProtocolHandler ["http-nio-80"]
+2017-08-10 14:30:49.577 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Starting ProtocolHandler ["http-nio-80"]
+2017-08-10 14:30:49.589 [main] INFO  o.a.t.util.net.NioSelectorPool.log<179>:
+Using a shared selector for servlet write/read
+2017-08-10 14:30:49.613 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start<198>:
+Tomcat started on port(s): 80 (http)
+2017-08-10 14:30:49.696 [main] INFO  com.example.Application.run<32>:
+
+2017-08-10 14:30:49.699 [main] INFO  com.example.Application.logStarted<57>:
+Started Application in 7.314 seconds (JVM running for 7.972)
+2017-08-10 14:31:15.632 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 14:31:15.638 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<489>:
+FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 14:31:15.656 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<508>:
+FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-08-10 14:33:07.775 [http-nio-80-exec-7] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService<47>:
+HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 14:42:56.715 [main] INFO  com.example.Application.logStarting<48>:
+Starting Application on LAPTOP-MTIQEU28 with PID 3168 (C:\workspace\containerhub\bin started by qijunbo in C:\workspace\containerhub)
+2017-08-10 14:42:56.718 [main] DEBUG com.example.Application.logStarting<51>:
+Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-08-10 14:42:56.718 [main] INFO  com.example.Application.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-10 14:42:56.791 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 14:42:56 CST 2017]; root of context hierarchy
+2017-08-10 14:42:57.420 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-10 14:42:59.338 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize<89>:
+Tomcat initialized with port(s): 80 (http)
+2017-08-10 14:42:59.367 [main] INFO  o.a.c.core.StandardService.log<179>:
+Starting service Tomcat
+2017-08-10 14:42:59.378 [main] INFO  o.a.c.core.StandardEngine.log<179>:
+Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-08-10 14:42:59.850 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring embedded WebApplicationContext
+2017-08-10 14:42:59.850 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext<276>:
+Root WebApplicationContext: initialization completed in 3059 ms
+2017-08-10 14:43:00.093 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.onStartup<190>:
+Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 14:43:00.099 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 14:43:00.106 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 14:43:00.107 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 14:43:00.107 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 14:43:00.107 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'simpleCORSFilter' to: [/*]
+2017-08-10 14:43:00.695 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 14:43:00.714 [main] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 14:43:00.830 [main] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 14:43:00.835 [main] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-10 14:43:00.837 [main] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-10 14:43:00.877 [main] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 14:43:01.175 [main] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-10 14:43:01.697 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-10 14:43:01.721 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-10 14:43:01.761 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 14:43:02.493 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache<534>:
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 14:42:56 CST 2017]; root of context hierarchy
+2017-08-10 14:43:02.585 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[POST]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.create(java.lang.String)
+2017-08-10 14:43:02.592 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[GET]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.temp(java.lang.String)
+2017-08-10 14:43:02.599 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[GET]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.get(long)
+2017-08-10 14:43:02.599 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[GET]}" onto public java.lang.Iterable<com.example.jpa.repository.Customer> com.example.jpa.resource.CustomerController.get()
+2017-08-10 14:43:02.600 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[PUT]}" onto public boolean com.example.jpa.resource.CustomerController.update(long,com.example.jpa.repository.Customer)
+2017-08-10 14:43:02.611 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[DELETE]}" onto public java.lang.String com.example.jpa.resource.CustomerController.delete(long)
+2017-08-10 14:43:02.612 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[POST]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.create(com.example.jpa.repository.Customer)
+2017-08-10 14:43:02.616 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 14:43:02.617 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 14:43:02.795 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 14:43:02.795 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 14:43:02.859 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 14:43:02.907 [main] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping.<init><573>:
+Adding welcome page: class path resource [public/index.html]
+2017-08-10 14:43:03.290 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated<431>:
+Registering beans for JMX exposure on startup
+2017-08-10 14:43:03.316 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Initializing ProtocolHandler ["http-nio-80"]
+2017-08-10 14:43:03.330 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Starting ProtocolHandler ["http-nio-80"]
+2017-08-10 14:43:03.344 [main] INFO  o.a.t.util.net.NioSelectorPool.log<179>:
+Using a shared selector for servlet write/read
+2017-08-10 14:43:03.368 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start<198>:
+Tomcat started on port(s): 80 (http)
+2017-08-10 14:43:03.440 [main] INFO  com.example.Application.run<32>:
+
+2017-08-10 14:43:03.441 [main] INFO  com.example.Application.logStarted<57>:
+Started Application in 7.068 seconds (JVM running for 7.71)
+2017-08-10 14:43:29.783 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 14:43:29.787 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<489>:
+FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 14:43:29.810 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<508>:
+FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-08-10 14:43:30.477 [http-nio-80-exec-6] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService<47>:
+HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 15:02:39.681 [http-nio-80-exec-7] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<43>:
+==== shell script executing result====
+2017-08-10 15:02:39.686 [http-nio-80-exec-7] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 15:35:29.825 [main] INFO  com.example.Application.logStarting<48>:
+Starting Application on LAPTOP-MTIQEU28 with PID 13740 (C:\workspace\containerhub\bin started by qijunbo in C:\workspace\containerhub)
+2017-08-10 15:35:29.829 [main] DEBUG com.example.Application.logStarting<51>:
+Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-08-10 15:35:29.829 [main] INFO  com.example.Application.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-10 15:35:29.900 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 15:35:29 CST 2017]; root of context hierarchy
+2017-08-10 15:35:30.397 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-10 15:35:32.692 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize<89>:
+Tomcat initialized with port(s): 80 (http)
+2017-08-10 15:35:32.743 [main] INFO  o.a.c.core.StandardService.log<179>:
+Starting service Tomcat
+2017-08-10 15:35:32.744 [main] INFO  o.a.c.core.StandardEngine.log<179>:
+Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-08-10 15:35:33.090 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring embedded WebApplicationContext
+2017-08-10 15:35:33.091 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext<276>:
+Root WebApplicationContext: initialization completed in 3191 ms
+2017-08-10 15:35:33.372 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.onStartup<190>:
+Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 15:35:33.379 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 15:35:33.380 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 15:35:33.381 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 15:35:33.382 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 15:35:33.382 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'simpleCORSFilter' to: [/*]
+2017-08-10 15:35:33.956 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 15:35:33.972 [main] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 15:35:34.060 [main] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 15:35:34.063 [main] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-10 15:35:34.066 [main] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-10 15:35:34.107 [main] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 15:35:34.228 [main] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-10 15:35:34.983 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-10 15:35:35.005 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-10 15:35:35.047 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 15:35:35.979 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache<534>:
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 15:35:29 CST 2017]; root of context hierarchy
+2017-08-10 15:35:36.079 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[POST]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.create(java.lang.String)
+2017-08-10 15:35:36.094 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[GET]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.temp(java.lang.String)
+2017-08-10 15:35:36.102 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[GET]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.get(long)
+2017-08-10 15:35:36.110 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[GET]}" onto public java.lang.Iterable<com.example.jpa.repository.Customer> com.example.jpa.resource.CustomerController.get()
+2017-08-10 15:35:36.111 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[PUT]}" onto public boolean com.example.jpa.resource.CustomerController.update(long,com.example.jpa.repository.Customer)
+2017-08-10 15:35:36.117 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[DELETE]}" onto public java.lang.String com.example.jpa.resource.CustomerController.delete(long)
+2017-08-10 15:35:36.118 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[POST]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.create(com.example.jpa.repository.Customer)
+2017-08-10 15:35:36.120 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 15:35:36.121 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 15:35:36.162 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 15:35:36.163 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 15:35:36.217 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 15:35:36.250 [main] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping.<init><573>:
+Adding welcome page: class path resource [public/index.html]
+2017-08-10 15:35:36.545 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated<431>:
+Registering beans for JMX exposure on startup
+2017-08-10 15:35:36.566 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Initializing ProtocolHandler ["http-nio-80"]
+2017-08-10 15:35:36.580 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Starting ProtocolHandler ["http-nio-80"]
+2017-08-10 15:35:36.592 [main] INFO  o.a.t.util.net.NioSelectorPool.log<179>:
+Using a shared selector for servlet write/read
+2017-08-10 15:35:36.615 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start<198>:
+Tomcat started on port(s): 80 (http)
+2017-08-10 15:35:36.672 [main] INFO  com.example.Application.run<32>:
+
+2017-08-10 15:35:36.673 [main] INFO  com.example.Application.logStarted<57>:
+Started Application in 7.186 seconds (JVM running for 7.809)
+2017-08-10 15:35:49.842 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 15:35:49.848 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<489>:
+FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 15:35:49.871 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<508>:
+FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2017-08-10 15:35:50.477 [http-nio-80-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService<47>:
+HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 16:02:07.950 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<43>:
+==== shell script executing result====
+2017-08-10 16:02:07.957 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:13:11.514 [http-nio-80-exec-4] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:13:11.515 [http-nio-80-exec-4] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:13:14.193 [http-nio-80-exec-5] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:13:14.200 [http-nio-80-exec-5] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:13:43.305 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:13:43.311 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:14:04.366 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:14:04.372 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$308d2173.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:17:46.712 [main] INFO  com.example.Application.logStarting<48>:
+Starting Application on LAPTOP-MTIQEU28 with PID 1364 (C:\workspace\containerhub\bin started by qijunbo in C:\workspace\containerhub)
+2017-08-10 17:17:46.716 [main] DEBUG com.example.Application.logStarting<51>:
+Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-08-10 17:17:46.717 [main] INFO  com.example.Application.logStartupProfileInfo<637>:
+No active profile set, falling back to default profiles: default
+2017-08-10 17:17:46.793 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh<582>:
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 17:17:46 CST 2017]; root of context hierarchy
+2017-08-10 17:17:47.318 [background-preinit] INFO  o.h.v.internal.util.Version.<clinit><30>:
+HV000001: Hibernate Validator 5.3.5.Final
+2017-08-10 17:17:49.106 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize<89>:
+Tomcat initialized with port(s): 80 (http)
+2017-08-10 17:17:49.130 [main] INFO  o.a.c.core.StandardService.log<179>:
+Starting service Tomcat
+2017-08-10 17:17:49.132 [main] INFO  o.a.c.core.StandardEngine.log<179>:
+Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-08-10 17:17:49.419 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring embedded WebApplicationContext
+2017-08-10 17:17:49.419 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext<276>:
+Root WebApplicationContext: initialization completed in 2626 ms
+2017-08-10 17:17:49.605 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.onStartup<190>:
+Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 17:17:49.613 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 17:17:49.616 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 17:17:49.616 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 17:17:49.617 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 17:17:49.617 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure<258>:
+Mapping filter: 'simpleCORSFilter' to: [/*]
+2017-08-10 17:17:50.228 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory<349>:
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 17:17:50.292 [main] INFO  o.h.j.internal.util.LogHelper.logPersistenceUnitInformation<31>:
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 17:17:50.408 [main] INFO  org.hibernate.Version.logVersion<37>:
+HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 17:17:50.411 [main] INFO  org.hibernate.cfg.Environment.<clinit><213>:
+HHH000206: hibernate.properties not found
+2017-08-10 17:17:50.413 [main] INFO  org.hibernate.cfg.Environment.buildBytecodeProvider<317>:
+HHH000021: Bytecode provider name : javassist
+2017-08-10 17:17:50.469 [main] INFO  o.h.annotations.common.Version.<clinit><66>:
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 17:17:50.631 [main] INFO  org.hibernate.dialect.Dialect.<init><156>:
+HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-08-10 17:17:51.364 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<400>:
+HHH000227: Running hbm2ddl schema export
+2017-08-10 17:17:51.393 [main] INFO  o.h.tool.hbm2ddl.SchemaExport.execute<464>:
+HHH000230: Schema export complete
+2017-08-10 17:17:51.445 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory<379>:
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 17:17:52.375 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache<534>:
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@318ba8c8: startup date [Thu Aug 10 17:17:46 CST 2017]; root of context hierarchy
+2017-08-10 17:17:52.466 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[POST]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.create(java.lang.String)
+2017-08-10 17:17:52.478 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/container/{owner}],methods=[GET]}" onto public com.example.docker.repository.Container com.example.docker.resource.DockerContainerController.temp(java.lang.String)
+2017-08-10 17:17:52.490 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[GET]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.get(long)
+2017-08-10 17:17:52.501 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[GET]}" onto public java.lang.Iterable<com.example.jpa.repository.Customer> com.example.jpa.resource.CustomerController.get()
+2017-08-10 17:17:52.503 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[PUT]}" onto public boolean com.example.jpa.resource.CustomerController.update(long,com.example.jpa.repository.Customer)
+2017-08-10 17:17:52.514 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer/{id}],methods=[DELETE]}" onto public java.lang.String com.example.jpa.resource.CustomerController.delete(long)
+2017-08-10 17:17:52.514 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/customer],methods=[POST]}" onto public com.example.jpa.repository.Customer com.example.jpa.resource.CustomerController.create(com.example.jpa.repository.Customer)
+2017-08-10 17:17:52.519 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 17:17:52.520 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register<543>:
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 17:17:52.583 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 17:17:52.596 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 17:17:52.665 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler<362>:
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 17:17:52.694 [main] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping.<init><573>:
+Adding welcome page: class path resource [public/index.html]
+2017-08-10 17:17:53.108 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated<431>:
+Registering beans for JMX exposure on startup
+2017-08-10 17:17:53.127 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Initializing ProtocolHandler ["http-nio-80"]
+2017-08-10 17:17:53.142 [main] INFO  o.a.c.http11.Http11NioProtocol.log<179>:
+Starting ProtocolHandler ["http-nio-80"]
+2017-08-10 17:17:53.157 [main] INFO  o.a.t.util.net.NioSelectorPool.log<179>:
+Using a shared selector for servlet write/read
+2017-08-10 17:17:53.176 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer.start<198>:
+Tomcat started on port(s): 80 (http)
+2017-08-10 17:17:53.271 [main] INFO  com.example.Application.run<34>:
+
+2017-08-10 17:17:53.276 [main] INFO  com.example.Application.logStarted<57>:
+Started Application in 6.898 seconds (JVM running for 7.504)
+2017-08-10 17:18:47.013 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[localhost].[/].log<179>:
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 17:18:47.018 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<489>:
+FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 17:18:47.036 [http-nio-80-exec-1] INFO  o.s.w.s.DispatcherServlet.initServletBean<508>:
+FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2017-08-10 17:18:47.813 [http-nio-80-exec-8] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:18:47.814 [http-nio-80-exec-8] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:18:49.722 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:18:49.727 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:19:22.601 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:19:22.615 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:19:24.644 [http-nio-80-exec-4] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:19:24.654 [http-nio-80-exec-4] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:20:10.227 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:20:10.237 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:20:13.385 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:20:13.392 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:25:30.780 [http-nio-80-exec-2] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:25:30.790 [http-nio-80-exec-2] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:25:32.716 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:25:32.724 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:25:56.480 [http-nio-80-exec-8] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:25:56.491 [http-nio-80-exec-8] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:25:57.801 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:25:57.807 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:26:49.232 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:26:49.248 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:26:50.713 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:26:50.718 [http-nio-80-exec-9] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:28:03.200 [http-nio-80-exec-2] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:28:03.210 [http-nio-80-exec-2] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:28:04.658 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:28:04.670 [http-nio-80-exec-1] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:28:24.550 [http-nio-80-exec-2] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:28:24.561 [http-nio-80-exec-2] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:28:25.992 [http-nio-80-exec-5] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:28:26.008 [http-nio-80-exec-5] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:33:32.622 [http-nio-80-exec-8] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:33:32.634 [http-nio-80-exec-8] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:33:34.755 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:33:34.760 [http-nio-80-exec-6] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]
+2017-08-10 17:33:44.953 [http-nio-80-exec-5] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<43>:
+==== shell script executing result====
+2017-08-10 17:33:44.960 [http-nio-80-exec-5] DEBUG c.e.d.s.ShellExecutorService$$EnhancerBySpringCGLIB$$f08acd85.getPort<44>:
+ShellExecutorService.ShellResult[errorcode=-1, message='' ]

@@ -1,6 +1,8 @@
 package com.example;
 
 
+import java.util.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +30,7 @@ public class Application  implements CommandLineRunner{
 	public void run(String... strings) throws Exception {
 		
 		// save a couple of customers
-		repository.save(new Customer("Jack", "Bauer", "Jack@builder.com", null ));
+		repository.save(new Customer("Jack", "Bauer", "Jack@builder.com", new Date() ));
 		log.info("");
 	 
 	}
