@@ -17,59 +17,66 @@ dreamApp.controller('containerCtl', function($scope, $resource) {
 		console.log(JSON.stringify(container));
 	});
 
-	var containers = ContainerService.query(function() {
-		$scope.containers = containers;
-		console.log(containers);
+	$scope.containers = new Array();
+	var response = ContainerService.query(function() {
+		$scope.containers = response.body;
+		console.log(response);
 	});
 
 	// one way of the get method
 	$scope.get1 = function(containerid) {
 		console.log(JSON.stringify(containerid));
-		var container = ContainerService.get({
+		var response = ContainerService.get({
 			id : containerid
 		}, function() {
-			container.id = containerid;
-			container.$save();
-			console.log(JSON.stringify(container));
-			$scope.container = container;
+			response.body.id = containerid;
+			response.$save();
+			console.log(JSON.stringify(response));
+			$scope.container = response.body;
 		});
 
 	};
 	// another way of the get method
 	$scope.get = function(containerid) {
+		$scope.imgcss = "sr-only "
 		console.log(JSON.stringify(containerid));
 		var container = ContainerService.get({
 			id : containerid
-		}).$promise.then(function(container) {
-			console.log(JSON.stringify(container));
-			$scope.container = container;
+		}).$promise.then(function(response) {
+			console.log(JSON.stringify(response));
+			$scope.container = response.body;
+			
+			if (response.header.errorCode == 0) {
+				$scope.msgcss = "fade  "
+			} else {
+				$scope.msgcss = "alert alert-danger "
+				$scope.message = response.header.message;
+			}
 		});
 	};
 
 	$scope.save = function(containerid) {
-		$scope.container.id = containerid;
-		console.log(JSON.stringify($scope.container));
+		console.log(JSON.stringify(containerid));
+		$scope.imgcss = ""
+		$scope.container = null;
 		ContainerService.save({
 			id : containerid
 		}, $scope.container, function success(response) {
-			console.log("Customer saved:" + JSON.stringify(response));
-			$scope.containers.push(response);
-		}, function error(errorResponse) {
-			alert("Connot connect to server.");
-			console.log("Error:" + JSON.stringify(errorResponse));
-		});
-	};
+			console.log("Command executed:" + JSON.stringify(response));
+			$scope.container = response.body;
+			$scope.imgcss = "sr-only"
+			if (response.header.errorCode == 0) {
+				$scope.msgcss = "fade  "
+			} else {
+				$scope.msgcss = "alert alert-danger "
+				$scope.message = response.header.message;
+			}
 
-	$scope.update = function(containerid) {
-		console.log(JSON.stringify(containerid));
-		ContainerService.update({
-			id : containerid
-		}, $scope.container, function success(response) {
-			console.log("Customer updated:" + JSON.stringify(containerid));
-
+			// $scope.containers.push(response.body);
 		}, function error(errorResponse) {
-			alert("Connot connect to server.");
 			console.log("Error:" + JSON.stringify(errorResponse));
+			$scope.msgcss = "alert alert-danger "
+			$scope.message = JSON.stringify(errorResponse);
 		});
 	};
 

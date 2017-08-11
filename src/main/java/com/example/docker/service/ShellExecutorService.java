@@ -25,9 +25,17 @@ public class ShellExecutorService {
 		if (container != null) {
 			return container;
 		}
-		
-		if (execute(createContainer, owner).getErrorcode() == 0) {
-			return getPort(owner);
+
+		ShellResult result = execute(createContainer, owner);
+		if (result.getErrorcode() == 0) {
+			// It takes a little time to creat container, so you cannot call
+			// getport() to get information immediately.
+			container = new Container(owner, owner, result.getMessage().trim());
+			if (LOG.isInfoEnabled()) {
+				LOG.info("==== shell script executing result====");
+				LOG.info(container.toString());
+			}
+			return container;
 		} else {
 			return null;
 		}

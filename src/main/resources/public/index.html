@@ -36,7 +36,7 @@
 
 
 	<div class="container" id="containers_container"
-		data-ng-controller="containerCtl">
+		data-ng-controller="containerCtl" data-ng-init="owner='sunway'">
 
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -58,7 +58,7 @@
 		</nav>
 
 
-		 <img alt="Brand" width="100%"   src="img/jingxuan009.jpg">
+		<img alt="Brand" width="100%" src="img/jingxuan009.jpg">
 
 
 		<!-- Modal dialog insert-->
@@ -74,6 +74,15 @@
 						</h4>
 					</div>
 					<div class="modal-body">
+						<div class="{{imgcss}}" >
+							 <img  src="img/timg.gif">
+						</div>
+						<div class="{{msgcss}}" role="alert">
+							<span class="glyphicon glyphicon-exclamation-sign"
+								aria-hidden="true"></span> <span class="sr-only">Error:</span>
+							{{message}}
+						</div>
+						
 						<form class="form-horizontal" role="form">
 							<div class="form-group">
 								<label class="col-sm-4 control-label text-capitalize"
@@ -87,7 +96,7 @@
 								<label for="txtfirstName"
 									class="col-sm-4 control-label text-capitalize"> Name</label>
 								<div class="col-sm-4">
-									<label class="col-sm-4 control-label">{{container.name}}</label>
+									<label class="col-sm-4 text-left control-label">{{container.name}}</label>
 
 								</div>
 								<label class="col-sm-4  text-left media-middle red">&nbsp;</label>
@@ -98,7 +107,7 @@
 								<label class="col-sm-4 control-label text-capitalize"
 									for="txtemail">Port</label>
 								<div class="col-sm-4">
-									<label class="col-sm-4 control-label">{{container.port}}</label>
+									<label class="col-sm-4 text-left control-label">{{container.port}}</label>
 
 								</div>
 								<label class="col-sm-4 control-label">&nbsp;</label>
@@ -108,8 +117,17 @@
 								<label class="col-sm-4 control-label text-capitalize"
 									for="txtBirthday">Create Date</label>
 								<div class="col-sm-4">
-									<label class="control-label text-capitalize">
+									<label class="control-label text-left">
 										{{container.createDate | date:'yyyy/MM/dd HH:mm:ss'}}</label>
+								</div>
+								<label class="col-sm-4 control-label">&nbsp;</label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label text-capitalize"
+									for="txtUuid">UUID</label>
+								<div class="col-sm-4">
+									<label class="control-label text-left ">
+										{{container.uuid}}</label>
 								</div>
 								<label class="col-sm-4 control-label">&nbsp;</label>
 							</div>
@@ -118,9 +136,7 @@
 
 					</div>
 					<div class="modal-footer">
-
 						<div class="btn-group">
-
 							<button type="button" class="btn btn-primary"
 								data-dismiss="modal">Close</button>
 						</div>
