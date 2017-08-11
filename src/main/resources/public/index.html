@@ -42,7 +42,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="#" class="navbar-brand glyphicon glyphicon-home"> </a>
-					<form class="navbar-form navbar-left" role="search" >
+					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
 							<input type="text" class="form-control" data-ng-model="owner"
 								placeholder="container_id">
@@ -62,7 +62,7 @@
 
 		<!-- Modal dialog insert-->
 		<div class="modal fade" id="dialog_edit" role="dialog">
-			<div class="modal-dialog modal-lg modal-dialog-mid">
+			<div class="modal-dialog  modal-dialog-mid">
 
 				<!-- Modal content-->
 				<div class="modal-content">
@@ -73,65 +73,46 @@
 						</h4>
 					</div>
 					<div class="modal-body">
-						<div class="{{imgcss}}" >
-							 <img  src="img/timg.gif">
+						<div class="{{imgcss}}">
+							<img src="img/timg.gif">
 						</div>
 						<div class="{{msgcss}}" role="alert">
 							<span class="glyphicon glyphicon-exclamation-sign"
 								aria-hidden="true"></span> <span class="sr-only">Error:</span>
 							{{message}}
 						</div>
-						
-						<form class="form-horizontal" role="form">
-							<div class="form-group">
-								<label class="col-sm-4 control-label text-capitalize"
-									for="txtid">Customer ID</label>
-								<div class="col-sm-4">
-									<label class="col-sm-4 text-left media-middle"> {{container.id}}</label>
-								</div>
+
+						<div class="row">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Customer ID</label>
+								<p class="text-left media-middle">{{container.id}}</p>
 							</div>
-							<div class="form-group">
-								<label for="txtfirstName"
-									class="col-sm-4 control-label text-capitalize"> Name</label>
-								<div class="col-sm-4">
-									<label class="col-sm-4 text-left control-label">{{container.name}}</label>
-
-								</div>
-								<label class="col-sm-4  text-left media-middle red">&nbsp;</label>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Name</label>
+								<p class="text-left media-middle">{{container.name}}</p>
 							</div>
-
-
-							<div class="form-group">
-								<label class="col-sm-4 control-label text-capitalize"
-									for="txtemail">Port</label>
-								<div class="col-sm-4">
-									<label class="col-sm-4 text-left control-label">{{container.port}}</label>
-
-								</div>
-								<label class="col-sm-4 control-label">&nbsp;</label>
+						</div>
+						<div class="row">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Port</label>
+								<p class="text-left media-middle">{{container.port}}</p>
 							</div>
-
-							<div class="form-group">
-								<label class="col-sm-4 control-label text-capitalize"
-									for="txtBirthday">Create Date</label>
-								<div class="col-sm-4">
-									<label class="control-label text-left">
-										{{container.createDate | date:'yyyy/MM/dd HH:mm:ss'}}</label>
-								</div>
-								<label class="col-sm-4 control-label">&nbsp;</label>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Create Date</label>
+								<p class="text-left media-middle">{{container.createDate |
+									date:'yyyy/MM/dd HH:mm:ss'}}</p>
 							</div>
-							<div class="form-group">
-								<label class="col-sm-4 control-label text-capitalize"
-									for="txtUuid">UUID</label>
-								<div class="col-sm-4">
-									<label class="control-label text-left ">
-										{{container.uuid}}</label>
-								</div>
-								<label class="col-sm-4 control-label">&nbsp;</label>
+						</div>
+						<div class="row">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-8">
+								<label class="control-label text-capitalize">UUID</label>
+								<p class="text-left media-middle">{{container.uuid}}</p>
 							</div>
-							<p class="well well-sm  hidden">INFO:{{container}}</p>
-						</form>
-
+						</div>
+						<p class="well well-sm  hidden">INFO:{{container}}</p>
 					</div>
 					<div class="modal-footer">
 						<div class="btn-group">
