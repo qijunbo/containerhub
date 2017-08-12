@@ -13,8 +13,14 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'gs-accessing-data-jpa'
+    baseName = 'containerhub'
     version =  '0.1.0'
+}
+
+
+springBoot {
+	mainClass = "com.example.Application"
+	executable = true
 }
 
 repositories {
@@ -31,6 +37,7 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2")
+    compile("com.google.code.gson:gson:2.3.1")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 

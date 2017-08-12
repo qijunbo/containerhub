@@ -1,7 +1,7 @@
 package com.example;
 
 
-import java.util.stream.IntStream;
+import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,6 +56,8 @@ public class Application  implements CommandLineRunner{
 		log.info("--------------------------------------------");
 		
 		repository.findByLastName("Bauer").forEach(bauer -> log.info(bauer.toString()));	 
+
+		repository.save(new Customer("Jack", "Bauer", "Jack@builder.com", new Date() ));
 		log.info("");
 	 
 	}

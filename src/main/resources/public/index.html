@@ -1,24 +1,137 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="dreamApp">
+
+<html lang="zh_CN" data-ng-app="dreamApp">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <head>
-<title>Smart Simulator</title>
+<title>Container Manager</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" href="css/styles.css" media="screen" />
-<link rel="stylesheet" href="css/sticky-footer.css">
+<script src="js/jquery-1.10.2.min.js"></script>
 
-<link rel="stylesheet" href="lib-css/bootstrap-theme.css" media="screen" />
-<link rel="stylesheet" href="lib-css/bootstrap.min.css" media="screen" />
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet"
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet"
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script
+	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script src="js/libs/jquery-1.10.2.min.js"></script>
-<script src="js/libs/bootstrap.min.js"></script>
+
+
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<script src="js/angular-cookies.min.js"></script>
+
+<script src="my-js/app.js"></script>
+<script src="my-js/containerControllers.js"></script>
+
 
 </head>
 <body>
-	<a href="./container/tony" >./container/tony</a>
-	<form action="./container/tony" method="post">
-		<input type="submit" value="submit" formenctype="application/json"></input>
-	</form>
+
+
+	<div class="container" id="containers_container"
+		data-ng-controller="containerCtl" data-ng-init="owner='sunway'">
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand glyphicon glyphicon-home"> </a>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" data-ng-model="owner"
+								placeholder="container_id">
+						</div>
+						<button type="button" class="btn btn-default" data-toggle="modal"
+							data-target="#dialog_edit" data-ng-click="save(owner)">创建容器</button>
+						<button type="button" class="btn btn-default" data-toggle="modal"
+							data-target="#dialog_edit" data-ng-click="get(owner)">查询信息</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+
+		<img alt="Brand" width="100%" src="img/jingxuan009.jpg">
+
+
+		<!-- Modal dialog insert-->
+		<div class="modal fade" id="dialog_edit" role="dialog">
+			<div class="modal-dialog  modal-dialog-mid">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">
+							<span class="glyphicon glyphicon-plus"></span>基本信息
+						</h4>
+					</div>
+					<div class="modal-body">
+						<div class="{{imgcss}}">
+							<img src="img/timg.gif">
+						</div>
+						<div class="{{msgcss}}" role="alert">
+							<span class="glyphicon glyphicon-exclamation-sign"
+								aria-hidden="true"></span> <span class="sr-only">Error:</span>
+							{{message}}
+						</div>
+
+						<div class="row">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Customer ID</label>
+								<p class="text-left media-middle">{{container.id}}</p>
+							</div>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Name</label>
+								<p class="text-left media-middle">{{container.name}}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Port</label>
+								<p class="text-left media-middle">{{container.port}}</p>
+							</div>
+							<div class="col-md-4">
+								<label class="control-label text-capitalize">Create Date</label>
+								<p class="text-left media-middle">{{container.createDate |
+									date:'yyyy/MM/dd HH:mm:ss'}}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-8">
+								<label class="control-label text-capitalize">UUID</label>
+								<p class="text-left media-middle">{{container.uuid}}</p>
+							</div>
+						</div>
+						<p class="well well-sm  hidden">INFO:{{container}}</p>
+					</div>
+					<div class="modal-footer">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary"
+								data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
 </body>
 </html>
+
+
+
+
+

@@ -1,7 +1,7 @@
 'use strict';
 
-var appContext = "./" ;
-
+//var appContext = "http://localhost:8080" ;
+var appContext = "" ;
 /* App Module */
 
 var dreamApp = angular.module('dreamApp', [
@@ -14,15 +14,9 @@ dreamApp.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
 
         $routeProvider.
-                when('/ionic', {
-                    templateUrl:'partials/ionic.html',
-                    controller: 'getChargePointController'
-                }).when('/', {
+                when('/other', {
                     templateUrl: 'partials/customers.html',
                     controller: 'costomerCtl'
-                }).when('/save/:id', {
-                    templateUrl: 'partials/notify.html',
-                    controller: 'saveChargePointController'
                 });
 
         $locationProvider.html5Mode(false).hashPrefix('!');
