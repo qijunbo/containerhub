@@ -5,6 +5,8 @@
 dreamApp.controller('containerCtl', function($scope, $resource) {
 
 	// var ContainerService = $resource( appContext + 'container/:id' );
+	$scope.ip = window.location.host;
+	console.log(window.location );
 
 	var ContainerService = $resource(appContext + 'container/:id', {
 		id : '@_id'
@@ -45,7 +47,7 @@ dreamApp.controller('containerCtl', function($scope, $resource) {
 		}).$promise.then(function(response) {
 			console.log(JSON.stringify(response));
 			$scope.container = response.body;
-			
+
 			if (response.header.errorCode == 0) {
 				$scope.msgcss = "fade  "
 			} else {
