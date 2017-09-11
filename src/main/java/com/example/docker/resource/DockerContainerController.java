@@ -49,7 +49,7 @@ public class DockerContainerController {
 	
 	
 	/**
-	 * @return all the Customers
+	 * @return all the Containers
 	 */
 	@RequestMapping(method = GET)
 	public @ResponseBody Iterable<Container> get() {
