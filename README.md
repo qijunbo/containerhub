@@ -7,9 +7,10 @@ containerhub
 <table width="100%">
 <tr><th>File Name</th><th>Description</th><th>备注</th> </tr>
 <tr><td>\src\main\resources\application.properties</td><td>配置文件, 指定了Shell脚本的存放路径.</td><td>&nbsp;</td></tr>
+<tr><td>\src\main\resources\public</td><td>Web页面, 采用AngularJS技术.</td><td>&nbsp;</td></tr>
 </table>
 
-
+<a id="home">
 使用指南
 --
 
@@ -40,5 +41,5 @@ java -jar   containerhub-0.1.0.jar
 <tr><td>/container/{ownerid}</td><td>POST</td><td>创建LIMS产品容器.</td><td>ownerid::String</td></tr>
 <tr><td>/container/{ownerid}</td><td>GET</td><td>返回指定客户的容器信息.</td><td>ownerid::String</td></tr>
 </table>
-
+[Home](#home)
 
