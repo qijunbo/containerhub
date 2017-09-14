@@ -1,0 +1,8 @@
+server:    
+    port: 81
+    session:
+        timeout: 1800
+
+docker:
+    create: /home/docker/docker/createcontainer.sh
+    getport: /home/docker/docker/getport.sh
