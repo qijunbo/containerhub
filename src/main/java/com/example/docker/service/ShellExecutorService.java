@@ -6,18 +6,19 @@ import java.io.InputStreamReader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import com.example.docker.repository.Container;
 
-@Configuration
+
+@Component
+@ConfigurationProperties(prefix="docker")
 public class ShellExecutorService {
 
 	private final Logger LOG = LoggerFactory.getLogger(this.getClass());
 
-	@Value("${docker.create}")
-	private String createContainer;
+	private String create;
 
 	public Container createContainer(String owner) {
 		// check if it already exists.
@@ -26,7 +27,7 @@ public class ShellExecutorService {
 			return container;
 		}
 
-		ShellResult result = execute(createContainer, owner);
+		ShellResult result = execute(create, owner);
 		if (result.getErrorcode() == 0) {
 			// It takes a little time to creat container, so you cannot call
 			// getport() to get information immediately.
@@ -41,7 +42,6 @@ public class ShellExecutorService {
 		}
 	}
 
-	@Value("${docker.getport}")
 	private String getport;
 
 	public Container getPort(String owner) {
@@ -117,5 +117,16 @@ public class ShellExecutorService {
 		}
 
 	}
+
+    public void setCreate(String create) {
+        this.create = create;
+    }
+
+    public void setGetport(String getport) {
+        this.getport = getport;
+    }
+	
+	
+	
 
 }
