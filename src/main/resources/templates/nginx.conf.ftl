@@ -1,0 +1,16 @@
+server {
+        listen       80;
+        server_name  118.190.153.23;
+        index index.php index.html index.htm;
+
+        access_log  /etc/nginx/conf.d/${clientId}.log main;
+
+        location /iframework {
+                proxy_set_header X-Forwarded-Host $host;
+                proxy_set_header Host $http_host;
+                proxy_set_header X-Forwarded-Server $host;
+                proxy_pass http://172.31.209.221:${app.port}/${context.path} ;
+                client_max_body_size    10m;
+        }
+
+}
