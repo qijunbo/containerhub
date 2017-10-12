@@ -33,7 +33,7 @@ public class Application  implements CommandLineRunner{
 	public void run(String... strings) throws Exception {
 		
 	     Map m = new HashMap();
-	        m.put("clientid", "tony");
+	        m.put("clientId", "tony");
 	        m.put("app.port", 12121);
 	        m.put("context.path", "iframework/");
 

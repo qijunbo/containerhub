@@ -1,5 +1,5 @@
 server:    
-    port: 81
+    port: 80
     session:
         timeout: 1800
 
@@ -7,8 +7,8 @@ docker:
     #create: /home/docker/docker/createcontainer.sh
     #getport: /home/docker/docker/getport.sh
     
-    create: D:/createcontainer.bat
-    getport: D:/getport.bat
+    create: d:/createcontainer.bat
+    getport: d:/getport.bat
     
 template:
     nginx: nginx.conf.ftl
